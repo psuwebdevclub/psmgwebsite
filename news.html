@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/news.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PSMG</title>
+  </head>
+  <body>
+    <div class="calendar">
+      <button onclick="show()">Close Calendar</button>
+
+      <iframe
+        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&showNav=0&showDate=0&showPrint=0&showTabs=0&showTz=0&showCalendars=0&src=cHN1d2ViZGV2Y2x1YkBnbWFpbC5jb20&color=%23039BE5"
+        style="border-width: 0"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a onclick="show()">Calendar</a></li>
+        <li><a href="contact.html">News</a></li>
+        <li><a href="login.html">Team</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="card">
+        <img src="assets/cover.png" />
+        <div class="content">
+          <p>
+            So we did something kinda cool but not really just read about it and
+            join our club because we really need new members or else this was
+            all for nothing. Please join our club. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/cover.png" />
+        <div class="content">
+          <p>
+            So we did something kinda cool but not really just read about it and
+            join our club because we really need new members or else this was
+            all for nothing. Please join our club. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please. join
+            our club because we really need new members or else this was all for
+            nothing. Please join our club. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/cover.png" />
+        <div class="content">
+          <p>
+            So we did something kinda cool but not really just read about it and
+            join our club because we really need new members or else this was
+            all for nothing. Please join our club. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/cover.png" />
+        <div class="content">
+          <p>
+            So we did something kinda cool but not really just read about it and
+            join our club because we really need new members or else this was
+            all for nothing. Please join our club. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+            Please. Please. Please. Please. Please. Please. Please. Please.
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    function show() {
+      var calendar = document.getElementsByClassName("calendar")[0];
+      var main = document.getElementsByTagName("main")[0];
+      if (calendar.style.opacity == 0) {
+        calendar.style.opacity = 1;
+        main.style.opacity = 0;
+      } else {
+        calendar.style.opacity = 0;
+        main.style.opacity = 1;
+      }
+    }
+  </script>
+</html>
