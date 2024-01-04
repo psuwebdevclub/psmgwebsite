@@ -43,7 +43,7 @@
     </main>
     <div class="mission">
       <div class="title">
-        <h2>Mission and Vision</h2>
+        <h2 class="tag">Mission and Vision</h2>
       </div>
       <div class="segment">
         <div class="card">
@@ -115,7 +115,7 @@
         <div class="panel panel-right">
           <div class="panel-content">
             <div class="form">
-              <h1>Contact us</h1>
+              <h1 class="tag">Contact us</h1>
               <div class="group">
                 <input type="text" required />
                 <span class="highlight"></span>
@@ -165,5 +165,18 @@
         main.style.opacity = 1;
       }
     }
+    document.addEventListener("scroll", function () {
+      var pageTop = window.scrollY || document.documentElement.scrollTop;
+      var pageBottom = pageTop + window.innerHeight;
+      var tags = document.querySelectorAll(".tag");
+
+      tags.forEach(function (tag) {
+        if (tag.getBoundingClientRect().top < pageBottom) {
+          tag.classList.add("visible");
+        } else {
+          tag.classList.remove("visible");
+        }
+      });
+    });
   </script>
 </html>

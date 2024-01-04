@@ -11,6 +11,13 @@ body {
   color: white;
   background-color: #000;
 }
+.visible {
+  opacity: 1 !important;
+}
+.tag {
+  opacity: 0;
+  transition: all 1.5s;
+}
 
 /* Style the video: 100% width and height to cover the entire window */
 #bg {
@@ -346,4 +353,42 @@ a.send-btn:hover {
 /* Change the link color to #111 (black) on hover */
 .calendar button:hover {
   background-color: #676767;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  .contact {
+    background: none;
+  }
+
+  .contact .inner .panel.panel-right {
+    position: relative;
+    right: 0;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    transform: none;
+    overflow: hidden;
+  }
+  .contact .inner .panel .panel-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .contact .inner .panel.panel-right {
+    margin-right: 0;
+    background: #1b1b1b;
+  }
 }
