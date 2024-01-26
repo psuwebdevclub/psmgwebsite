@@ -26,16 +26,19 @@ body::-webkit-scrollbar {
 
 /* Style the video: 100% width and height to cover the entire window */
 #bg {
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  overflow: hidden;
-  opacity: 0.8; /* Adjust the opacity value to make it darker */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1; /* Behind content but above the background */
 }
+
 main {
   position: relative;
   height: 100vh;
+  z-index: 1;
   overflow: hidden;
   opacity: 1;
   transition: opacity 1s ease;
@@ -43,16 +46,17 @@ main {
 /* Add some content at the bottom of the video/page */
 .content {
   color: #ffffff;
-  position: absolute;
-  bottom: 0;
+  position: absolute; /* Change from relative to absolute */
+  bottom: -30px; /* Adjust this value to position the content at the bottom of the video */
   background-color: rgba(82, 82, 82, 0.49);
   width: 100%;
   padding: 30px;
+  margin-bottom: 30px;
+  z-index: 2; /* Ensure it's above the video */
 }
 
 .overlay {
   text-shadow: 1px 1px 2px black;
-
   width: 100%;
   text-align: center;
   background: none;
@@ -61,6 +65,7 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 10px;
+  z-index: 2; /* Ensure it's above the video */
 }
 
 h1 {
@@ -73,6 +78,8 @@ h3 {
   font-size: 2rem;
 }
 
+/* --------------------------------- NAVBAR --------------------------------- */
+
 nav {
   font-size: 1.1rem;
   position: fixed;
@@ -81,7 +88,7 @@ nav {
   height: 68px;
   background-color: #2C3E50; /* Dark blue background */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  z-index: 1;
+  z-index: 9999; /* High z-index to ensure it's on top */
   display: flex;
   justify-content: space-around;
   align-items: center; /* Align items vertically */
@@ -128,13 +135,14 @@ li a:hover::after {
 }
 
 
-
+/* --------------------------------- MISSION AND VISION ---------------------------- */
 
 
 .mission {
+  position: relative;
   background-color: #f1faff;
   color: black;
-  position: relative;
+  z-index: 3;
 }
 
 .title {
@@ -181,6 +189,8 @@ li a:hover::after {
   background-size: cover;
 }
 
+/* --------------------------------- CONTACT US ---------------------------- */
+
 .contact {
   background-image: url("../assets/record copy.jpg");
   background-size: contain;
@@ -189,6 +199,8 @@ li a:hover::after {
   margin: 0;
   padding: 0;
   transition: all 0.3s ease;
+  z-index: 4; /* High enough to be above other content */
+  position: relative; /* Make sure it's positioned correctly in the flow */
 }
 .contact .inner {
   overflow: hidden;
