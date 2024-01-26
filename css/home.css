@@ -19,6 +19,11 @@ body {
   transition: all 1.5s;
 }
 
+body::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
 /* Style the video: 100% width and height to cover the entire window */
 #bg {
   right: 0;
@@ -73,31 +78,58 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(70, 162, 255, 0.49);
+  height: 68px;
+  background-color: #2C3E50; /* Dark blue background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   z-index: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; /* Align items vertically */
 }
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-}
-li {
-  float: left;
+  display: flex; /* Use flexbox instead of float */
 }
 
 li a {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   display: block;
-  color: white;
+  cursor: pointer;
+  color: #ECF0F1; /* Light grey for text */
   text-align: center;
-  padding: 14px 16px;
+  padding: 23px 30px; /* Increased side padding */
   text-decoration: none;
+  position: relative;
+  transition: color 0.3s, background-color 0.3s; /* Added background color transition */
 }
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #111;
+li a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #3498DB; /* Bright blue for underline */
+  height: 3px;
+  transition: left 0.3s ease, right 0.3s ease;
 }
+
+li a:hover {
+  color: #AAB7B8; /* Slightly lighter grey on hover */
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle background color on hover */
+}
+
+li a:hover::after {
+  left: 0;
+  right: 0;
+}
+
+
+
+
 
 .mission {
   background-color: #f1faff;
