@@ -86,13 +86,20 @@ nav {
   top: 0;
   width: 100%;
   height: 68px;
-  background-color: #2C3E50; /* Dark blue background */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  z-index: 9999; /* High z-index to ensure it's on top */
+  background-color: transparent; /* Start with a transparent background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
   display: flex;
   justify-content: space-around;
-  align-items: center; /* Align items vertically */
+  align-items: center;
+  transition: background-color 0.3s; /* Smooth transition for background color */
 }
+
+.nav-scrolled {
+  background-color: rgba(0,0,0,0.8); /* Dark blue background when scrolled */
+  text-transform: uppercase;
+}
+
 
 ul {
   list-style-type: none;
@@ -140,8 +147,8 @@ li a:hover::after {
 
 .mission {
   position: relative;
-  background-color: #f1faff;
-  color: black;
+  background-image: linear-gradient(#878787, #444);
+  color: #FFF;
   z-index: 3;
 }
 
@@ -157,12 +164,11 @@ li a:hover::after {
 }
 
 .segment:nth-child(even) {
-  background-color: #f1faff;
   flex-wrap: wrap;
 }
 
 .segment:nth-child(odd) {
-  background-color: #1b1b1b;
+  background-color: #1B1B1B;
   flex-wrap: wrap-reverse;
 }
 .quote {
@@ -173,12 +179,162 @@ li a:hover::after {
 }
 
 .card {
-  margin: 50px;
+  margin: 100px 50px;
   color: white;
   padding: 20px;
   width: 300px;
   height: 400px;
   background-color: #000000a5;
+}
+
+.card2{
+    position: relative;
+    width: 320px;
+    height: 400px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 130px 50px;
+    transition: 0.5s;
+}
+@media screen and (max-width: 400px) {
+    .card2{
+        width: 270px;
+        margin: 40px 6px;
+    }
+    .card2:hover{
+        margin-left: 32px;
+        margin-right: 0px !important;
+    }
+}
+.card2::before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+}
+.card2::after{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+    filter: blur(30px);
+}
+.card2_left::before, .card2_left::after{
+    background-image: linear-gradient(315deg, #33FF00, #FF0033);
+}
+.card2_middle::before, .card2_middle::after{
+    background-image: linear-gradient(315deg, #37A1EA, #FA135C);
+}
+.card2_right::before, .card2_right::after{
+    background-image: linear-gradient(315deg, #00EE44, #3300FF);
+}
+.card2:hover::before{
+    transform: skewX(0deg);
+    left: 20px;
+    width: calc(100% - 90px);
+}
+.card2:hover::after{
+    transform: skewX(0deg);
+    left: 20px;
+    width: calc(100% - 90px);
+}
+
+.card2 span{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    pointer-events: none;
+}
+.card2 span::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-radius: 8px;
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.1s;
+    animation: animate 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+.card2 span::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-radius: 8px;
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.5s;
+    animation: animate 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    animation-delay: -1s;
+
+}
+.card2:hover span::before{
+    top: -50px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+.card2:hover span::after{
+    bottom: -50px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+.card2_content{
+    position: relative;
+    left: 0;
+    padding: 20px 40px;
+    background-color: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    z-index: 1;
+    transform: 0.5s;
+    color: #fff;
+}
+.card2:hover .card2_content{
+    left: -25px;
+    padding: 60px 40px;
+}
+.card2_content H2{
+    font-size: 2em;
+    color: #FFF;
+    margin-bottom: 10px;
+}
+.card2_content p{
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4em;
 }
 
 .support {

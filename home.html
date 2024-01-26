@@ -39,13 +39,6 @@
                 <h1>Penn State Music Group</h1>
                 <h3>Creating the Music Industry's Next Leaders</h3>
             </div>
-
-            <div class="content">
-                <h2>Blah Blah</h2>
-                <p>
-                    Some more blah blah down here too would you look at that suprising no?
-                </p>
-            </div>
         </main>
 
         <!-- ********************* Mission and Vision ********************* -->
@@ -53,27 +46,8 @@
             <div class="title">
                 <h2 class="tag">Mission and Vision</h2>
             </div>
-            <div class="segment">
-                <div class="card">
-                    <p>
-                        We do stuff and things for music I guess and its truly inspiring to
-                        be able to put this on my resume. I mean, I'm not even a music major
-                        or business major but I'm still here. I'm just here for the free
-                        food and the resume boost.
-                    </p>
-                    <div class="quote">-Cofounder</div>
-                </div>
-                <div class="card">
-                    <p>
-                        We do stuff and things for music I guess and its truly inspiring to
-                        be able to put this on my resume. I mean, I'm not even a music major
-                        or business major but I'm still here. I'm just here for the free
-                        food and the resume boost.
-                    </p>
-                    <div class="quote">-Cofounder</div>
-                </div>
-                <div class="support"></div>
-            </div>
+
+
             <div class="segment">
                 <div class="support"></div>
                 <div class="card">
@@ -95,6 +69,49 @@
                     <div class="quote">-Cofounder</div>
                 </div>
             </div>
+
+
+            <div class="segment segment2">
+
+              <div class="card2 card2_left">
+                  <span></span>
+                  <div class="card2_content">
+                    <H2>Cofounder</H2>
+                    <p>
+                      We do stuff and things for music I guess and its truly inspiring to
+                      be able to put this on my resume. I mean, I'm not even a music major
+                      or business major but I'm still here. I'm just here for the free
+                      food and the resume boost.
+                    </p>
+                  </div>
+              </div>
+              <div class="card2 card2_middle">
+                  <span></span>
+                  <div class="card2_content">
+                    <H2>Cofounder</H2>
+                    <p>
+                      We do stuff and things for music I guess and its truly inspiring to
+                      be able to put this on my resume. I mean, I'm not even a music major
+                      or business major but I'm still here. I'm just here for the free
+                      food and the resume boost.
+                    </p>
+                  </div>
+              </div>
+              <div class="card2 card2_right">
+                  <span></span>
+                  <div class="card2_content">
+                    <H2>Cofounder</H2>
+                    <p>
+                      We do stuff and things for music I guess and its truly inspiring to
+                      be able to put this on my resume. I mean, I'm not even a music major
+                      or business major but I'm still here. I'm just here for the free
+                      food and the resume boost.
+                    </p>
+                  </div>
+              </div>
+            </div>
+
+
             <div class="segment">
                 <div class="card">
                     <p>
@@ -165,6 +182,18 @@
     </body>
 
     <script>
+
+
+    window.addEventListener('scroll', function() {
+        var nav = document.querySelector('nav');
+        if (window.pageYOffset > 0) {
+            nav.classList.add('nav-scrolled');
+        } else {
+            nav.classList.remove('nav-scrolled');
+    }
+    });
+
+
         function show() {
             var calendar = document.getElementsByClassName("calendar")[0];
             var main = document.getElementsByTagName("main")[0];
