@@ -28,7 +28,7 @@ body {
 main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   position: relative;
   height: 100%;
   opacity: 1;
@@ -36,7 +36,7 @@ main {
   padding: 100px;
 }
 .card {
-  margin: 50px;
+  margin-bottom: 50px;
   width: 500px;
 }
 .card img {
