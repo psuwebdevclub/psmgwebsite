@@ -235,14 +235,11 @@ li a:hover::after {
     filter: blur(30px);
 }
 .card2_left::before, .card2_left::after{
-    background-image: linear-gradient(315deg, #33FF00, #FF0033);
-}
+  background-image: linear-gradient(315deg, #0078ed, #0b256d);}
 .card2_middle::before, .card2_middle::after{
-    background-image: linear-gradient(315deg, #37A1EA, #FA135C);
-}
+  background-image: linear-gradient(315deg, #0078ed, #8c34a8);}
 .card2_right::before, .card2_right::after{
-    background-image: linear-gradient(315deg, #00EE44, #3300FF);
-}
+  background-image: linear-gradient(315deg, #6db6fd, #0b256d);}
 .card2:hover::before{
     transform: skewX(0deg);
     left: 20px;
