@@ -1,182 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="css/home.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PSMG</title>
-  </head>
-  <body>
-    <div class="calendar">
-      <button onclick="show()">Close Calendar</button>
 
-      <iframe
-        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&showNav=0&showDate=0&showPrint=0&showTabs=0&showTz=0&showCalendars=0&src=cHN1d2ViZGV2Y2x1YkBnbWFpbC5jb20&color=%23039BE5"
-        style="border-width: 0"
-        frameborder="0"
-        scrolling="no"
-      ></iframe>
-    </div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="home.html">Home</a></li>
-        <li><a onclick="show()">Calendar</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="login.html">Team</a></li>
-      </ul>
-    </nav>
-    <main>
-      <video autoplay muted loop id="bg">
-        <source src="assets/NLF.mp4" type="video/mp4" />
-      </video>
-      <div class="overlay">
-        <h1>Penn State Music Group</h1>
-        <h3>Creating the Music Industry's Next Leaders</h3>
-      </div>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="css/home.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PSMG</title>
+    </head>
 
-      <div class="content">
-        <h2>Blah Blah</h2>
-        <p>
-          Some more blah blah down here too would you look at that suprising no?
-        </p>
-      </div>
-    </main>
-    <div class="mission">
-      <div class="title">
-        <h2 class="tag">Mission and Vision</h2>
-      </div>
-      <div class="segment">
-        <div class="card">
-          <p>
-            We do stuff and things for music I guess and its truly inspiring to
-            be able to put this on my resume. I mean, I'm not even a music major
-            or business major but I'm still here. I'm just here for the free
-            food and the resume boost.
-          </p>
-          <div class="quote">-Cofounder</div>
-        </div>
-        <div class="card">
-          <p>
-            We do stuff and things for music I guess and its truly inspiring to
-            be able to put this on my resume. I mean, I'm not even a music major
-            or business major but I'm still here. I'm just here for the free
-            food and the resume boost.
-          </p>
-          <div class="quote">-Cofounder</div>
-        </div>
-        <div class="support"></div>
-      </div>
-      <div class="segment">
-        <div class="support"></div>
-        <div class="card">
-          <p>
-            We do stuff and things for music I guess and its truly inspiring to
-            be able to put this on my resume. I mean, I'm not even a music major
-            or business major but I'm still here. I'm just here for the free
-            food and the resume boost.
-          </p>
-          <div class="quote">-Cofounder</div>
-        </div>
-        <div class="card">
-          <p>
-            We do stuff and things for music I guess and its truly inspiring to
-            be able to put this on my resume. I mean, I'm not even a music major
-            or business major but I'm still here. I'm just here for the free
-            food and the resume boost.
-          </p>
-          <div class="quote">-Cofounder</div>
-        </div>
-      </div>
-      <div class="segment">
-        <div class="card">
-          <p>
-            We do stuff and things for music I guess and its truly inspiring to
-            be able to put this on my resume. I mean, I'm not even a music major
-            or business major but I'm still here. I'm just here for the free
-            food and the resume boost.
-          </p>
-          <div class="quote">-Cofounder</div>
-        </div>
-        <div class="card">
-          <p>
-            We do stuff and things for music I guess and its truly inspiring to
-            be able to put this on my resume. I mean, I'm not even a music major
-            or business major but I'm still here. I'm just here for the free
-            food and the resume boost.
-          </p>
-          <div class="quote">-Cofounder</div>
+    <body>
+        <!--CHANGE CALENDAR TO OUTLOOK INTEGRATION-->
+        <div class="calendar">
+            <button onclick="show()">Close Calendar</button>
+
+            <iframe
+                src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&showNav=0&showDate=0&showPrint=0&showTabs=0&showTz=0&showCalendars=0&src=cHN1d2ViZGV2Y2x1YkBnbWFpbC5jb20&color=%23039BE5"
+                style="border-width: 0"
+                frameborder="0"
+                scrolling="no"
+            ></iframe>
         </div>
 
-        <div class="support"></div>
-      </div>
-    </div>
-    <div class="contact">
-      <div class="inner">
-        <div class="panel panel-right">
-          <div class="panel-content">
-            <div class="form">
-              <h1 class="tag">Contact us</h1>
-              <div class="group">
-                <input type="text" required />
-                <span class="highlight"></span>
-                <label>Your name</label>
-              </div>
-              <div class="group">
-                <input type="text" required />
-                <span class="highlight"></span>
-                <label>Your email</label>
-              </div>
-              <div class="group">
-                <input type="text" required />
-                <span class="highlight"></span>
-                <label>Your message</label>
-              </div>
-              <a class="send-btn">Send</a>
+        <!-- ********************* NavBar ********************* -->
+        <!-- Add logo and stuff-->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a onclick="show()">Calendar</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="login.html">Team</a></li>
+            </ul>
+        </nav>
+
+        <!-- ********************* main jumbotron ********************* -->
+        <main>
+            <video autoplay muted loop id="bg">
+                <source src="assets/NLF.mp4" type="video/mp4" />
+            </video>
+            <div class="overlay">
+                <h1>Penn State Music Group</h1>
+                <h3>Creating the Music Industry's Next Leaders</h3>
             </div>
-            <div class="follow">
-              <ul>
-                <li>
-                  <a href="https://www.facebook.com/psmusicgroup/">icon here</a>
-                </li>
-                <li>
-                  <a href="https://www.instagram.com/psmusicgroup/"
-                    >icon here</a
-                  >
-                </li>
-                <li>
-                  <a href="https://twitter.com/psmusicgroup">icon here</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
-  <script>
-    function show() {
-      var calendar = document.getElementsByClassName("calendar")[0];
-      var main = document.getElementsByTagName("main")[0];
-      if (calendar.style.opacity == 0) {
-        calendar.style.opacity = 1;
-        main.style.opacity = 0;
-      } else {
-        calendar.style.opacity = 0;
-        main.style.opacity = 1;
-      }
-    }
-    document.addEventListener("scroll", function () {
-      var pageTop = window.scrollY || document.documentElement.scrollTop;
-      var pageBottom = pageTop + window.innerHeight;
-      var tags = document.querySelectorAll(".tag");
+            <div class="content">
+                <h2>Blah Blah</h2>
+                <p>
+                  Some more blah blah down here too would you look at that suprising no?
+                </p>
+              </div>
+        </main>
 
-      tags.forEach(function (tag) {
-        if (tag.getBoundingClientRect().top < pageBottom) {
-          tag.classList.add("visible");
+        <!-- ********************* Mission and Vision ********************* -->
+        <div class="mission">
+            <div class="title">
+                <h2 class="tag">Mission and Vision</h2>
+            </div>
+
+
+            <div class="segment">
+                <div class="support"></div>
+                <div class="card">
+                    <p>
+                        We do stuff and things for music I guess and its truly inspiring to
+                        be able to put this on my resume. I mean, I'm not even a music major
+                        or business major but I'm still here. I'm just here for the free
+                        food and the resume boost.
+                    </p>
+                    <div class="quote">-Cofounder</div>
+                </div>
+                <div class="card">
+                    <p>
+                        We do stuff and things for music I guess and its truly inspiring to
+                        be able to put this on my resume. I mean, I'm not even a music major
+                        or business major but I'm still here. I'm just here for the free
+                        food and the resume boost.
+                    </p>
+                    <div class="quote">-Cofounder</div>
+                </div>
+            </div>
+
+
+            <div class="segment segment2">
+
+              <div class="card2 card2_left">
+                  <span></span>
+                  <div class="card2_content">
+                    <H2>Cofounder</H2>
+                    <p>
+                      We do stuff and things for music I guess and its truly inspiring to
+                      be able to put this on my resume. I mean, I'm not even a music major
+                      or business major but I'm still here. I'm just here for the free
+                      food and the resume boost.
+                    </p>
+                  </div>
+              </div>
+              <div class="card2 card2_middle">
+                  <span></span>
+                  <div class="card2_content">
+                    <H2>Cofounder</H2>
+                    <p>
+                      We do stuff and things for music I guess and its truly inspiring to
+                      be able to put this on my resume. I mean, I'm not even a music major
+                      or business major but I'm still here. I'm just here for the free
+                      food and the resume boost.
+                    </p>
+                  </div>
+              </div>
+              <div class="card2 card2_right">
+                  <span></span>
+                  <div class="card2_content">
+                    <H2>Cofounder</H2>
+                    <p>
+                      We do stuff and things for music I guess and its truly inspiring to
+                      be able to put this on my resume. I mean, I'm not even a music major
+                      or business major but I'm still here. I'm just here for the free
+                      food and the resume boost.
+                    </p>
+                  </div>
+              </div>
+            </div>
+
+
+            <div class="segment">
+                <div class="card">
+                    <p>
+                        We do stuff and things for music I guess and its truly inspiring to
+                        be able to put this on my resume. I mean, I'm not even a music major
+                        or business major but I'm still here. I'm just here for the free
+                        food and the resume boost.
+                    </p>
+                    <div class="quote">-Cofounder</div>
+                </div>
+                <div class="card">
+                    <p>
+                        We do stuff and things for music I guess and its truly inspiring to
+                        be able to put this on my resume. I mean, I'm not even a music major
+                        or business major but I'm still here. I'm just here for the free
+                        food and the resume boost.
+                    </p>
+                    <div class="quote">-Cofounder</div>
+                </div>
+
+                <div class="support"></div>
+            </div>
+        </div>
+
+        <!-- ********************* Contact Us ********************* -->
+        <div class="contact">
+            <div class="inner">
+                <div class="panel panel-right">
+                    <div class="panel-content">
+                        <div class="form">
+                            <h1 class="tag">Contact us</h1>
+                            <div class="group">
+                                <input type="text" required />
+                                <span class="highlight"></span>
+                                <label>Your name</label>
+                            </div>
+                            <div class="group">
+                                <input type="text" required />
+                                <span class="highlight"></span>
+                                <label>Your email</label>
+                            </div>
+                            <div class="group">
+                                <input type="text" required />
+                                <span class="highlight"></span>
+                                <label>Your message</label>
+                            </div>
+                            <a class="send-btn">Send</a>
+                        </div>
+                        <div class="follow">
+                            <ul>
+                                <li>
+                                    <a href="https://www.facebook.com/psmusicgroup/">icon here</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/psmusicgroup/"
+                                        >icon here</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/psmusicgroup">icon here</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+
+
+    window.addEventListener('scroll', function() {
+        var nav = document.querySelector('nav');
+        if (window.pageYOffset > 0) {
+            nav.classList.add('nav-scrolled');
         } else {
-          tag.classList.remove("visible");
-        }
-      });
+            nav.classList.remove('nav-scrolled');
+    }
     });
-  </script>
+
+
+        function show() {
+            var calendar = document.getElementsByClassName("calendar")[0];
+            var main = document.getElementsByTagName("main")[0];
+            if (calendar.style.opacity == 0) {
+                calendar.style.opacity = 1;
+                main.style.opacity = 0;
+            } else {
+                calendar.style.opacity = 0;
+                main.style.opacity = 1;
+            }
+        }
+        document.addEventListener("scroll", function () {
+            var pageTop = window.scrollY || document.documentElement.scrollTop;
+            var pageBottom = pageTop + window.innerHeight;
+            var tags = document.querySelectorAll(".tag");
+
+            tags.forEach(function (tag) {
+                if (tag.getBoundingClientRect().top < pageBottom) {
+                    tag.classList.add("visible");
+                } else {
+                    tag.classList.remove("visible");
+                }
+            });
+        });
+    </script>
 </html>
