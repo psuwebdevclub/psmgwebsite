@@ -1,0 +1,186 @@
+@font-face {
+  font-family: "didot";
+  src: url("../GFS_Didot/GFSDidot-Regular.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "didot", "Times New Roman", Times, serif;
+}
+
+/* background */
+body {
+  color: rgb(0, 0, 0);
+  background-image: url("../assets/bg.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#bg {
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  opacity: 0.8; 
+}
+
+
+/* large images */
+.team-members {
+display: flex;
+justify-content: space-around;
+padding: 75px;
+}
+
+.member.large {
+display: flex;
+}
+
+.member.medium {
+display: flex;
+margin-top: 95px;
+}
+
+.member.large img {
+background-color: #fff;
+border: 10px solid #000;
+border-radius: 50%;
+width: 250px;
+height: 250px;
+}
+
+.member.medium img{
+background-color: #fff;
+border: 10px solid #000;
+border-radius: 50%;
+width: 225px;
+height: 225px;
+}
+
+
+/* curve divider */
+.curve {
+margin-left: auto;
+margin-right: auto;
+width:95%; 
+height:100px;  
+border:solid 5px #ffffff;
+border-color:#ffffff transparent transparent transparent;
+border-radius: 50%/100px 100px 0 0;
+}
+
+
+/* members list */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto; 
+}
+
+.member-element {
+  display: flex;
+  justify-content: space-around; 
+  flex-wrap: wrap;
+  width: 100%; 
+}
+
+.member-details {
+  width: calc(50% - 10px); 
+  margin: 5px;
+  box-sizing: border-box;
+}
+/* images */
+.details {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center; 
+  width: 100%; 
+}
+
+.details img {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 5px solid #000;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+/* text */
+.info {
+  background-color: #fff;
+  width: 350px;
+  height: 100px;
+  border-radius: 25px;
+}
+
+.info p {
+  margin: 10px;
+}
+
+
+/* nav bar */
+nav {
+  font-size: 1.1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(70, 162, 255, 0.49);
+  z-index: 1;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+.calendar {
+  position: absolute;
+  top: 10vh;
+  width: 100%;
+  height: 80vh;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.calendar iframe {
+  width: 100%;
+  height: 80vh;
+}
+
+.calendar button {
+  border: none;
+  display: block;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.calendar button:hover {
+  background-color: #676767;
+}
